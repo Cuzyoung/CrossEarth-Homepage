@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="CrossEarth: Geospatial Vision Foundation Model for Domain Generalizable Remote Sensing
+        Semantic Segmentation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="twitter:card" content="summary">
+
+  <meta name="twitter:title" content="CrossEarth: Title">
+  <meta name="twitter:description" content="CrossEarth: Title">
+  <meta name="twitter:creator" content="@Yuru Jia">
+
+  <title>CrossEarth
+  </title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1FWSVCGZTG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-1FWSVCGZTG');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.png">
+  <link rel="stylesheet" href="./static/css/scrolling-wrapper.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-widescreen">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title mb-0 pb-0">CrossEarth 
+          </title></h1>
+          <img style="width: 5%; height: 12%;" src="./static/imgs/crossearth.png" alt="cross-earth-logo"/>
+          
+          <h3 class="title is-3 publication-title mt-0 pt-0">Geospatial Vision Foundation Model for Domain Generalizable <br> Remote Sensing
+            Semantic Segmentation</h3>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a target="_blank" rel="noopener noreferrer" href="">Ziyang Gong</a><sup>*</sup><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a target="_blank" rel="noopener noreferrer" href="">Zhixiang Wei</a><sup>*</sup><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a target="_blank" rel="noopener noreferrer" href="">Di Wang</a><sup>*</sup><sup>3</sup>,
+              </span>
+              <span class="author-block">
+                <a target="_blank" rel="noopener noreferrer" href="">Xianzheng Ma</a><sup>3</sup>,
+              </span>
+              <span class="author-block">
+                <a target="_blank" rel="noopener noreferrer" href="">Hongruixuan Chen</a><sup>4</sup>,
+              </span>          
+              <span class="author-block">
+                <a target="_blank" rel="noopener noreferrer" href="">Yuru Jia</a><sup>5,6</sup>,
+              </span>
+              <span class="author-block">
+                <a target="_blank" rel="noopener noreferrer" href="">Yupeng Deng</a><sup>1</sup>,
+              </span>
+              <br>
+              <span class="author-block">
+                <a target="_blank" rel="noopener noreferrer" href="">Zhenming Ji</a><sup>1</sup>,
+              </span>       
+              <span class="author-block">
+                <a target="_blank" rel="noopener noreferrer" href="">Xiangwei Zhu</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a target="_blank" rel="noopener noreferrer" href="">Naoto Yokoya</a><sup>4</sup>,
+              </span>
+              <span class="author-block">
+                <a target="_blank" rel="noopener noreferrer" href="">Jing Zhang</a><sup>3</sup>,
+              </span>
+              <span class="author-block">
+                <a target="_blank" rel="noopener noreferrer" href="">Bo Du</a><sup>3</sup>,
+              </span>
+              <span class="author-block">
+                <a target="_blank" rel="noopener noreferrer" href="">Liangpei Zhang</a><sup>3</sup>
+              </span>             
+            </div>
+            <span class="eql-cntrb"><small><sup>*</sup>Indicates Equal Contribution</small></span>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Sun Yat-sen University</span>
+              <span class="author-block"><sup>2</sup>University of Science and Technology of China</span>
+              <span class="author-block"><sup>3</sup>Wuhan University</span>
+              <br>
+              <span class="author-block"><sup>4</sup>University of Tokyo</span>
+              <span class="author-block"><sup>5</sup>KU Leuven</span>
+              <span class="author-block"><sup>6</sup>KTH</span>
+              <!-- <span class="author-block"><sup>7</sup>IEEE</span> -->
+            </div>
+                   
+            <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- Github Link. -->
+              <span class="link-block">
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/Cuzyoung/CrossEarth/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github" style="color: rgb(255, 255, 255)"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+
+              <!-- Github Link. -->
+              <span class="link-block">
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/Cuzyoung/CrossEarth/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github" style="color: rgb(255, 255, 255)"></i>
+                  </span>
+                  <span>Benchmark</span>
+                  </a>
+              </span>
+
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf" style="color: #ff8038"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>                          
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser Figure -->
+<section class="crossearth teaser">
+  <div class="container is-max-widescreen">
+    <div class="hero-body">
+      <div class="image-viewport">
+        <img src="./static/imgs/teaser.png">   
+      </div>
+      <div class="content has-text-justified">
+        <p>We propose the first Vision Foundation Model (VFM) for Remote Sensing Domain Generalization (RSDG) semantic segmentation, named CrossEarth which is competent for crossing diverse domain gaps and segmentation tasks.</p>
+      </div>           
+    </div>
+  </div>
+</section>
+
+<section class="section pt-0">
+  <div class="container is-max-widescreen">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Cross-domain generalization aims to extrapolate models’ in-domain ability to diverse unseen domains. This capability is crucial 
+            for Remote Sensing (RS) imagery characterized by variabilities, such as wavelength range, modality, and platform, which leads to 
+            diverse and severe domain gaps. Therefore, Remote Sensing Domain Generalization (RSDG) has become a vital and valuable research frontier, 
+            focusing on developing generalizable models to be effectively applied to diverse scenarios. However, existing RS research has largely overlooked 
+            this area: (1) Current cross-domain models mainly focus on Domain Adaptation (DA), which adapts models to specific domains rather than diverse, unseen ones;
+             (2) There are only a few RSDG works and both of them are specialized models trapped in overfitting and underfitting issues; (3) Existing RS Foundation Models 
+             prioritize performance on in-domain data rather than emphasizing cross-domain generalization. Considering that the universal understanding ability of 
+             foundation models inherently aligns with the concept of generalization, we focus on the semantic segmentation task and propose the first Vision Foundation Model 
+             for RSDG, CrossEarth, which equips strong cross-domain generalizability through data-level Earth-Style Injection pipeline and model-level Multi-Task Training pipeline. 
+             Additionally, given the lack of unified benchmarks in RSDG, we also curate a benchmark collection for facilitating generalizability testing in future RSDG research.
+              The collection includes 28 semantic segmentation benchmarks centering on diverse domain gaps and segmentation tasks. Extensive experiments are conducted on collected 
+              benchmarks, demonstrating the superiority of CrossEarth. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section pt-0">
+  <div class="container is-max-widescreen">
+    <!-- Benchmark. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Existing Benchmark</h2>
+        <div class="content has-text-justified">
+          <p>
+          We categorize all benchmark datasets based on the domain gaps between the source and unseen domain datasets.
+          </p>
+          <img width="100%" src="./static/imgs/benchmark.png" alt="Methods"/>
+      </div>
+    </div>
+    <!--/ Benchmark. -->
+  </div>
+</section>
+
+<section class="section pt-0">
+  <div class="container is-max-widescreen">
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">How does CrossEarth generalize well?</h2>
+        <div class="content has-text-justified">
+          <h3 class="title has-text-centered">
+            Data Manipulation + Representation Learning
+          </h3>
+          <br>
+          <img width="100%" src="./static/imgs/method.png" alt="Methods"/>
+
+          <p>
+            CrossEarth uses an Earth-Style Injection pipeline to create stylized and masked images, 
+            which are then processed by a Multi-Task Training pipeline 
+            for semantic segmentation and masked image modeling (MIM). 
+          </p>
+      </div>
+    </div>
+    <!--/ Method. -->
+  </div>
+</section>
+
+
+<section class="section pt-0">
+  <div class="container is-max-widescreen">
+    <!-- Performance. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Quantitative Performance </h2>
+        <div class="content has-text-justified">
+          <h3 class="title has-text-centered">
+            Comparison on on Potsdam and Vaihingen Benchmarks
+          </h3>
+          <img width="100%" src="./static/imgs/performance.png" alt="Performance"/>
+
+          <p>
+            Refer to the pdf paper for more details on ablation studies and references.
+          </p>
+      </div>
+    </div>
+    <!--/ Performance. -->
+  </div>
+</section>
+
+
+
+<section class="section pt-0">
+  <div class="container is-max-widescreen">
+    <!-- Performance. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Qualitative Results</h2>
+        <div class="content has-text-justified">
+        
+            <div class="container">
+              <div id="results-carousel" class="carousel results-carousel">
+               <div class="item">
+                <!-- Your image here -->
+                <img src="./static/imgs/result3.png" alt="MY ALT TEXT"/>
+                <h2 class="subtitle has-text-centered">
+                  First image description.
+                </h2>
+              </div>
+              <div class="item">
+                <!-- Your image here -->
+                <img src="./static/imgs/result2.png" alt="MY ALT TEXT"/>
+                <h2 class="subtitle has-text-centered">
+                  Second image description.
+                </h2>
+              </div>
+              <div class="item">
+                <!-- Your image here -->
+                <img src="static/imgs/result1.png" alt="MY ALT TEXT"/>
+                <h2 class="subtitle has-text-centered">
+                 Third image description.
+               </h2>
+             </div>
+             
+          </div>
+        </div>
+        </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<!--BibTex citation -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>BibTex Code Here</code></pre>
+  </div>
+</section>
+<!--End BibTex citation -->
+
+
+
+<footer class="footer pt-0 pb-0">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Website template based on
+            <a href="https://github.com/nerfies/nerfies.github.io">
+              Nerfies
+            </a>
+            and licensed under
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+              CC-BY-SA-4.0
+            </a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    bulmaCarousel.attach('#results-carousel', {
+      slidesToScroll: 1,
+      slidesToShow: 1,
+      loop: true,
+      autoplay: true,
+      pauseOnHover: true,
+      navigation: true,
+      pagination: false,
+    });
+  });
+</script>
+
+</body>
+</html>
