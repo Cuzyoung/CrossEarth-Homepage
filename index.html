@@ -47,6 +47,23 @@
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
+
+  <style>
+    body {
+      background-image: url('static/imgs/background.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      min-height: 100vh;
+    }
+
+    /* 为了确保内容可读性,可以添加半透明遮罩 */
+    .container {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      padding: 20px;
+    }
+  </style>
 </head>
 <body>
 
@@ -55,11 +72,11 @@
     <div class="container is-max-widescreen">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title mb-0 pb-0">CrossEarth 
+          <h1 class="title is-1 publication-title mb-0 pb-0"><img style="width: 50px; height: 50px;" src="./static/imgs/crossearth.png" alt="cross-earth-logo"/> CrossEarth: 
           </title></h1>
-          <img style="width: 5%; height: 12%;" src="./static/imgs/crossearth.png" alt="cross-earth-logo"/>
+         
           
-          <h3 class="title is-3 publication-title mt-0 pt-0">Geospatial Vision Foundation Model for Domain Generalizable <br> Remote Sensing
+          <h3 class="title is-3 publication-title mt-0 pt-0"> Geospatial Vision Foundation Model for Domain Generalizable <br> Remote Sensing
             Semantic Segmentation</h3>
 
             <div class="is-size-5 publication-authors">
@@ -132,7 +149,7 @@
 
               <!-- Github Link. -->
               <span class="link-block">
-                <a target="_blank" rel="noopener noreferrer" href="https://github.com/Cuzyoung/CrossEarth/"
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/Cuzyoung/CrossEarth/tree/main/benchmarks"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github" style="color: rgb(255, 255, 255)"></i>
@@ -164,15 +181,18 @@
   <div class="container is-max-widescreen">
     <div class="hero-body">
       <div class="image-viewport">
-        <img src="./static/imgs/teaser.png">   
+        <img src="./static/imgs/teaser_new.png">   
       </div>
       <div class="content has-text-justified">
-        <p>We propose the first Vision Foundation Model (VFM) for Remote Sensing Domain Generalization (RSDG) semantic segmentation, named CrossEarth which is competent for crossing diverse domain gaps and segmentation tasks.</p>
+        <p><strong>Teaser for CrossEarth.</strong> Most existing RS methods focus on DA, which only adapts models to predefined target domains rather than enabling generalization to diverse unseen domains. 
+          On the other hand, existing RSDG methods cannot generalize well across various cross-domain scenarios. 
+          For this reason, we propose CrossEarth, the first VFM designed for RSDG, capable of bridging diverse domain gaps and effectively handling multiple segmentation scenarios. </p>
       </div>           
     </div>
   </div>
 </section>
-
+<br>
+<br>
 <section class="section pt-0">
   <div class="container is-max-widescreen">
     <!-- Abstract. -->
@@ -181,18 +201,14 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Cross-domain generalization aims to extrapolate models’ in-domain ability to diverse unseen domains. This capability is crucial 
-            for Remote Sensing (RS) imagery characterized by variabilities, such as wavelength range, modality, and platform, which leads to 
-            diverse and severe domain gaps. Therefore, Remote Sensing Domain Generalization (RSDG) has become a vital and valuable research frontier, 
-            focusing on developing generalizable models to be effectively applied to diverse scenarios. However, existing RS research has largely overlooked 
-            this area: (1) Current cross-domain models mainly focus on Domain Adaptation (DA), which adapts models to specific domains rather than diverse, unseen ones;
-             (2) There are only a few RSDG works and both of them are specialized models trapped in overfitting and underfitting issues; (3) Existing RS Foundation Models 
-             prioritize performance on in-domain data rather than emphasizing cross-domain generalization. Considering that the universal understanding ability of 
-             foundation models inherently aligns with the concept of generalization, we focus on the semantic segmentation task and propose the first Vision Foundation Model 
-             for RSDG, CrossEarth, which equips strong cross-domain generalizability through data-level Earth-Style Injection pipeline and model-level Multi-Task Training pipeline. 
-             Additionally, given the lack of unified benchmarks in RSDG, we also curate a benchmark collection for facilitating generalizability testing in future RSDG research.
-              The collection includes 28 semantic segmentation benchmarks centering on diverse domain gaps and segmentation tasks. Extensive experiments are conducted on collected 
-              benchmarks, demonstrating the superiority of CrossEarth. 
+            The field of Remote Sensing Domain Generalization (RSDG) has emerged as a critical and valuable research frontier, focusing on developing models that generalize effectively across diverse scenarios. 
+            Despite the substantial domain gaps in RS images that are characterized by variabilities such as location, wavelength, and sensor type, research in this area remains underexplored: 
+            (1) Current cross-domain methods primarily focus on Domain Adaptation (DA), which adapts models to predefined domains rather than to unseen ones; 
+            (2) Few studies targeting the RSDG issue, especially for semantic segmentation tasks, where existing models are developed for specific unknown domains, struggling with issues of underfitting on other unknown scenarios; 
+            (3) Existing RS foundation models tend to prioritize in-domain performance over cross-domain generalization. To this end, we introduce the first vision foundation model for RSDG semantic segmentation, \textbf{CrossEarth}. 
+            CrossEarth demonstrates strong cross-domain generalization through a specially designed data-level Earth-Style Injection pipeline and a model-level Multi-Task Training pipeline. 
+            In addition, for the semantic segmentation task, we have curated an RSDG benchmark comprising 28 cross-domain settings across various regions, spectral bands, platforms, and climates, providing a comprehensive framework for testing the generalizability of future RSDG models. 
+            Extensive experiments on this benchmark demonstrate the superiority of CrossEarth over existing state-of-the-art methods.
           </p>
         </div>
       </div>
@@ -205,7 +221,7 @@
     <!-- Benchmark. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Existing Benchmark</h2>
+        <h2 class="title is-3">Benchmark Collection</h2>
         <div class="content has-text-justified">
           <p>
           We categorize all benchmark datasets based on the domain gaps between the source and unseen domain datasets.
@@ -222,22 +238,35 @@
     <!-- Method. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">How does CrossEarth generalize well?</h2>
+        <h2 class="title is-3">Does CrossEarth generalize well? How?</h2>
+        <br>
         <div class="content has-text-justified">
           <h3 class="title has-text-centered">
-            Data Manipulation + Representation Learning
+              (a) High-quality Representative Features
           </h3>
+          <p class="has-text-centered">
+            CrossEarth extracts features that cluster closely for the same class across different domains, forming well-defined groups in feature space.
+            Moreover, CrossEarth features exhibit high inter-class separability, forming unique clusters for each class.
+          </p>
+          <br>  
+          <img width="100%" src="./static/imgs/umap_domain_invariant_00.png" alt="Feature"/>
           <br>
-          <img width="100%" src="./static/imgs/method.png" alt="Methods"/>
-
-          <p>
+          <h3 class="title has-text-centered">
+            (b) Data Manipulation + Representation Learning
+          </h3>
+          <p class="has-text-centered">
             CrossEarth uses an Earth-Style Injection pipeline to create stylized and masked images, 
             which are then processed by a Multi-Task Training pipeline 
             for semantic segmentation and masked image modeling (MIM). 
           </p>
+          <br>
+          <img width="100%" src="./static/imgs/method.png" alt="Methods"/>
       </div>
     </div>
     <!--/ Method. -->
+    <p>
+      Refer to the pdf paper for more technical details of CrossEarth.
+    </p>
   </div>
 </section>
 
@@ -296,6 +325,20 @@
                  Third image description.
                </h2>
              </div>
+              <div class="item">
+                <!-- Your image here -->
+                <img src="static/imgs/umap_casid_supp_00.png" alt="MY ALT TEXT"/>
+                <h2 class="subtitle has-text-centered">
+                Third image description.
+              </h2>
+            </div>
+              <div class="item">
+              <!-- Your image here -->
+              <img src="static/imgs/feat_map_supp_00.png" alt="MY ALT TEXT"/>
+              <h2 class="subtitle has-text-centered">
+              Third image description.
+            </h2>
+          </div>
              
           </div>
         </div>
