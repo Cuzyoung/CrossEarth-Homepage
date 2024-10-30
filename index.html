@@ -59,7 +59,7 @@
 
     /* 为了确保内容可读性,可以添加半透明遮罩 */
     .container {
-      background-color: rgba(255, 255, 255, 0.9);
+      background-color: rgba(255, 255, 255, 1);
       border-radius: 10px;
       padding: 20px;
     }
@@ -200,16 +200,27 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p>
-            The field of Remote Sensing Domain Generalization (RSDG) has emerged as a critical and valuable research frontier, focusing on developing models that generalize effectively across diverse scenarios. 
-            Despite the substantial domain gaps in RS images that are characterized by variabilities such as location, wavelength, and sensor type, research in this area remains underexplored: 
-            (1) Current cross-domain methods primarily focus on Domain Adaptation (DA), which adapts models to predefined domains rather than to unseen ones; 
-            (2) Few studies targeting the RSDG issue, especially for semantic segmentation tasks, where existing models are developed for specific unknown domains, struggling with issues of underfitting on other unknown scenarios; 
-            (3) Existing RS foundation models tend to prioritize in-domain performance over cross-domain generalization. To this end, we introduce the first vision foundation model for RSDG semantic segmentation, \textbf{CrossEarth}. 
-            CrossEarth demonstrates strong cross-domain generalization through a specially designed data-level Earth-Style Injection pipeline and a model-level Multi-Task Training pipeline. 
-            In addition, for the semantic segmentation task, we have curated an RSDG benchmark comprising 28 cross-domain settings across various regions, spectral bands, platforms, and climates, providing a comprehensive framework for testing the generalizability of future RSDG models. 
-            Extensive experiments on this benchmark demonstrate the superiority of CrossEarth over existing state-of-the-art methods.
-          </p>
+            <li><strong> RSDG Importance: </strong> RSDG is a vital research area focused on creating models that can generalize across different scenarios in RS images.
+
+            <li><strong> Challenges in RSDG: </strong>
+
+                    <li style="margin-left: 38px;">DA Limitations: Current methods focus on adapting to predefined domains rather than unseen ones.</li>
+                    <li style="margin-left: 38px;">Lack of RSDG Studies: There is a scarcity of studies addressing RSDG, where models struggle with underfitting in unknown scenarios.</li>
+                    <li style="margin-left: 38px;">In-Domain Performance Overemphasis: Existing VFMs prioritize performance within a domain over cross-domain generalization.</li>
+
+            </li>
+            <li><strong> CrossEarth: </strong> We introduce CrossEarth, the first vision foundation model for RSDG semantic segmentation.</li>
+
+            <li><strong> CrossEarth Advantages: </strong>
+                    <li style="margin-left: 38px;">Data-Level Earth-Style Injection pipeline.</li>
+                    <!-- <br> -->
+                    <li style="margin-left: 38px;">Model-Level Multi-Task Training pipeline.</li>
+
+            </li>
+
+            <li><strong> RSDG Benchmark: </strong> We have created an RSDG benchmark with 28 cross-domain settings to test the generalizability of future models.
+
+            <li><strong> CrossEarth Performance: </strong> Extensive experiments show CrossEarth outperforms current state-of-the-art methods in RSDG semantic segmentation.
         </div>
       </div>
     </div>
@@ -261,12 +272,13 @@
           </p>
           <br>
           <img width="100%" src="./static/imgs/method.png" alt="Methods"/>
+          <p>
+            Refer to the pdf paper for more technical details of CrossEarth.
+          </p>
       </div>
     </div>
     <!--/ Method. -->
-    <p>
-      Refer to the pdf paper for more technical details of CrossEarth.
-    </p>
+
   </div>
 </section>
 
